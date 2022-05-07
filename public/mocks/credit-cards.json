@@ -1,0 +1,22 @@
+[
+    {
+        "id": "38891eb7-de03-49b8-9f9f-018505395743",
+        "name": "credit card"
+    },
+    {
+        "id": "5f356be3-0f87-41d8-abda-dd923907f159",
+        "name": "paypal"
+    },
+    {
+        "id": "44d3e4c6-7af6-432e-a688-49b43fdf0533",
+        "name": "sofort"
+    },
+    {
+        "id": "3c67aede-98a5-46a2-95ab-637f71d6ecf4",
+        "name": "boacompra"
+    },
+    {
+        "id": "cdc68999-85a4-4cfd-ab12-84254d13f645",
+        "name": "boku"
+    }
+]

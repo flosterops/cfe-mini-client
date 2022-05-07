@@ -1,0 +1,48 @@
+{
+    "social": [
+        {
+            "id": "0db41393-2be9-4ed8-8dda-f7748b584369",
+            "src": "/img/social/twitch.png"
+        },
+        {
+            "id": "a99278ea-6f3f-4254-a93c-a609aee679f2",
+            "src": "/img/social/twitter.png"
+        },
+        {
+            "id": "bdb9e26e-961b-4ede-a556-51bfc7b69ef8",
+            "src": "/img/social/facebook.png"
+        }
+    ],
+    "links": [
+        {
+            "id": "907805ca-b854-4549-8cf7-194ed08fb08b",
+            "href": "https://www.google.com/",
+            "text": "footer:aboutUs"
+        },
+        {
+            "id": "0fc380a6-12ef-403c-855f-cbef2d460651",
+            "href": "https://www.google.com/",
+            "text": "footer:contact"
+        },
+        {
+            "id": "05696f1e-72e6-47fb-bbb1-a9d5c90a827f",
+            "href": "https://www.google.com/",
+            "text": "footer:press"
+        },
+        {
+            "id": "f4503af4-d1ba-4a0c-b1d6-8797e352c9ac",
+            "href": "https://www.google.com/",
+            "text": "footer:termsOfService"
+        },
+        {
+            "id": "2be13366-f9dd-4cad-83da-2b62c79ea71c",
+            "href": "https://www.google.com/",
+            "text": "footer:privacyPolicy"
+        },
+        {
+            "id": "fa0bd974-dd91-4f8f-a938-b251a1fd9786",
+            "href": "https://www.google.com/",
+            "text": "footer:cookiesSettings"
+        }
+    ]
+}

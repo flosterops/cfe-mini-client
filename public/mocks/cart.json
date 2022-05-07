@@ -1,0 +1,29 @@
+[
+    {
+        "id": "D2050_STARTER_CLASS_PACK",
+        "name": "Starter Class Pack",
+        "price": "999",
+        "bonus": "20",
+        "additionalInfo": "3 days only",
+        "count": 1,
+        "img": "https://s6r5v2u5.ssl.hwcdn.net//211/QHA/QLT/WRT/S4N.jpg"
+    },
+    {
+        "id": "D2050_ENGINEER_CLASS_PACK",
+        "name": "Engineer Class Pack",
+        "price": "1999",
+        "bonus": "50",
+        "additionalInfo": "3 days only",
+        "count": 4,
+        "img": "https://s6r5v2u5.ssl.hwcdn.net//211/B0N/SYA/JWB/4GU.jpg"
+    },
+    {
+        "id": "D2050_DEMOLITIONIST_CLASS_PACK",
+        "name": "Demolitionist Class Pack",
+        "price": "2999",
+        "bonus": "150",
+        "additionalInfo": "3 days only",
+        "count": 5,
+        "img": "https://s6r5v2u5.ssl.hwcdn.net//211/E0A/TUA/G0T/CPI.jpg"
+    }
+]

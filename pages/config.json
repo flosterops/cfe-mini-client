@@ -1,0 +1,18 @@
+[
+    {
+        "id": "d5a97b59-ef15-4d83-858d-dab137481e06",
+        "text": "game",
+        "external": true,
+        "to": "https://glyph.trionworlds.com/"
+    },
+    {
+        "id": "ac0ea247-6466-49d8-92c1-faf219ad5c4d",
+        "text": "store",
+        "to": "/"
+    },
+    {
+        "id": "db4e285b-a1c9-43af-9752-9ebf4d9f9ecb",
+        "text": "support",
+        "to": "/support"
+    }
+]

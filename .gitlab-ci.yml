@@ -1,0 +1,198 @@
+variables:
+  IMAGE: $CI_PROJECT_NAME
+  REGISTRY: gcr.io
+  PROJECT: oneplatform-us-247012
+
+  DOCKER_AUTH_CONFIG: >
+    {"auths":{},"credHelpers":{"gcr.io":"gcr"}}
+
+  DEPLOY_CI_TRIGGER_TOKEN: 6ec00692346d663259bb7d03906eb6
+  DEPLOY_CI_TRIGGER_URL: https://git2.services.gamigo.com/api/v4/projects/332/trigger/pipeline
+
+stages:
+  - test
+  - build
+  - tag
+  - verify
+  - deploy:auto
+  - deploy:manual
+
+test:build:
+  stage: test
+  only:
+    - branches
+  image: $REGISTRY/$PROJECT/node:14.15.1
+  variables:
+    XDG_CACHE_HOME: $CI_PROJECT_DIR/.cache
+  script:
+    - yarn install
+    - yarn build
+  cache:
+    key: "$CI_JOB_STAGE-$CI_COMMIT_REF_SLUG"
+    paths:
+      - .cache/
+    policy: pull-push
+
+build:kaniko:branch:
+  stage: build
+  only:
+    - master
+    - /^canary\/.*$/
+  image:
+    name: $REGISTRY/$PROJECT/kaniko-executor:v1.5.1-debug
+    entrypoint: [""]
+  script:
+    - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/docker/Dockerfile
+      --destination $REGISTRY/$PROJECT/$IMAGE:$CI_COMMIT_REF_SLUG-$CI_COMMIT_SHA
+      --destination $REGISTRY/$PROJECT/$IMAGE:$CI_COMMIT_SHA
+      --destination $REGISTRY/$PROJECT/$IMAGE:$CI_COMMIT_REF_SLUG
+
+tag:gcrane:
+  stage: tag
+  only:
+    - tags
+  variables:
+    GIT_STRATEGY: none
+  image:
+    name: $REGISTRY/$PROJECT/gcrane:d77840f06752a4fc133fa4534f667a3e9c0f6422784eb4cbb5076f08659d9cf0
+    entrypoint: [""]
+  script:
+    - gcrane tag $REGISTRY/$PROJECT/$IMAGE:$CI_COMMIT_SHA $CI_COMMIT_TAG
+
+verify:branch:
+  stage: verify
+  only:
+    - master
+    - /^canary\/.*$/
+  variables:
+    GIT_STRATEGY: none
+  services:
+    - name: $REGISTRY/$PROJECT/$IMAGE:$CI_COMMIT_REF_SLUG-$CI_COMMIT_SHA
+      alias: service
+  image: $REGISTRY/$PROJECT/alpine:3.13.2
+  script:
+    - timeout 30 nc -z service 3000
+    - wget -S -O- http://service:3000/healthz
+
+verify:tag:
+  stage: verify
+  only:
+    - tags
+  variables:
+    GIT_STRATEGY: none
+  services:
+    - name: $REGISTRY/$PROJECT/$IMAGE:$CI_COMMIT_TAG
+      alias: service
+  image: $REGISTRY/$PROJECT/alpine:3.13.2
+  script:
+    - timeout 30 nc -z service 3000
+    - sleep 10
+    - wget -S -O- http://service:3000/healthz
+
+deploy:dev:
+  stage: deploy:auto
+  only:
+    - master
+    - tags
+  environment:
+    name: dev
+  variables:
+    GIT_STRATEGY: none
+  image:
+    name: $REGISTRY/$PROJECT/curl:7.74.0
+    # name: curlimages/curl:7.74.0
+    entrypoint: [""]
+  before_script:
+    - test -n "$DEPLOY_CI_TRIGGER_TOKEN"
+    - test -n "$DEPLOY_CI_TRIGGER_URL"
+    - curl --version
+  script:
+    - |
+      curl -X POST \
+        -F token=$DEPLOY_CI_TRIGGER_TOKEN \
+        -F "ref=master" \
+        -F "variables[TAG]=${CI_COMMIT_TAG:-$CI_COMMIT_REF_SLUG-$CI_COMMIT_SHA}" \
+        -F "variables[ENVIRONMENT]=DEV" \
+        $DEPLOY_CI_TRIGGER_URL
+
+deploy:dev:canary:
+  stage: deploy:auto
+  only:
+    - /^canary\/.*$/
+  environment:
+    name: dev-$CI_COMMIT_REF_SLUG
+    on_stop: stop:dev:canary
+  variables:
+    GIT_STRATEGY: none
+  image:
+    name: $REGISTRY/$PROJECT/curl:7.74.0
+    # name: curlimages/curl:7.74.0
+    entrypoint: [""]
+  before_script:
+    - test -n "$DEPLOY_CI_TRIGGER_TOKEN"
+    - test -n "$DEPLOY_CI_TRIGGER_URL"
+    - curl --version
+  script:
+    - |
+      curl -X POST \
+        -F token=$DEPLOY_CI_TRIGGER_TOKEN \
+        -F "ref=master" \
+        -F "variables[TAG]=$CI_COMMIT_REF_SLUG-$CI_COMMIT_SHA" \
+        -F "variables[CANARY]=${CI_COMMIT_REF_SLUG#canary-}" \
+        -F "variables[ENVIRONMENT]=DEV" \
+        $DEPLOY_CI_TRIGGER_URL
+
+stop:dev:canary:
+  stage: deploy:manual
+  when: manual
+  only:
+    - /^canary\/.*$/
+  environment:
+    name: dev-$CI_COMMIT_REF_SLUG
+    action: stop
+  variables:
+    GIT_STRATEGY: none
+  image:
+    name: $REGISTRY/$PROJECT/curl:7.74.0
+    # name: curlimages/curl:7.74.0
+    entrypoint: [""]
+  before_script:
+    - test -n "$DEPLOY_CI_TRIGGER_TOKEN"
+    - test -n "$DEPLOY_CI_TRIGGER_URL"
+    - curl --version
+  script:
+    - |
+      curl -X POST \
+        -F token=$DEPLOY_CI_TRIGGER_TOKEN \
+        -F "ref=master" \
+        -F "variables[TAG]=$CI_COMMIT_REF_SLUG-$CI_COMMIT_SHA" \
+        -F "variables[CANARY]=${CI_COMMIT_REF_SLUG#canary-}" \
+        -F "variables[ENVIRONMENT]=DEV" \
+        -F "variables[ACTION]=uninstall" \
+        $DEPLOY_CI_TRIGGER_URL
+deploy:mig:
+  stage: deploy:auto
+  only:
+    - master
+    - tags
+  environment:
+    name: mig
+  variables:
+    GIT_STRATEGY: none
+  image:
+    name: $REGISTRY/$PROJECT/curl:7.74.0
+    # name: curlimages/curl:7.74.0
+    entrypoint: [""]
+  before_script:
+    - test -n "$DEPLOY_CI_TRIGGER_TOKEN"
+    - test -n "$DEPLOY_CI_TRIGGER_URL"
+    - curl --version
+  script:
+    - |
+      curl -X POST \
+        -F token=$DEPLOY_CI_TRIGGER_TOKEN \
+        -F "ref=master" \
+        -F "variables[TAG]=${CI_COMMIT_TAG:-$CI_COMMIT_REF_SLUG-$CI_COMMIT_SHA}" \
+        -F "variables[ENVIRONMENT]=MIG" \
+        $DEPLOY_CI_TRIGGER_URL
+

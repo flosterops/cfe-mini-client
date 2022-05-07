@@ -1,0 +1,76 @@
+{
+    "defaultSeverity": "error",
+    "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
+    "jsRules": {},
+    "rules": {
+        "jsx-no-lambda": false,
+        "ordered-imports": false,
+        "arrow-return-shorthand": true,
+        "callable-types": true,
+        "class-name": true,
+        "comment-format": [true, "check-space"],
+        "curly": true,
+        "forin": true,
+        "interface-name": false,
+        "interface-over-type-literal": true,
+        "label-position": true,
+        "member-access": false,
+        "member-ordering": [
+            true,
+            {
+                "order": ["static-field", "instance-field", "static-method", "instance-method"]
+            }
+        ],
+        "no-arg": true,
+        "no-bitwise": true,
+        "no-console": [true, "log"],
+        "no-construct": true,
+        "no-debugger": true,
+        "no-duplicate-super": true,
+        "no-empty": false,
+        "no-empty-interface": true,
+        "no-eval": true,
+        "no-inferrable-types": [true, "ignore-params"],
+        "no-misused-new": true,
+        "no-non-null-assertion": true,
+        "no-shadowed-variable": true,
+        "no-string-literal": false,
+        "no-string-throw": true,
+        "no-switch-case-fall-through": true,
+        "no-unnecessary-initializer": true,
+        "no-unused-expression": true,
+        "no-var-keyword": true,
+        "object-literal-sort-keys": false,
+        "prefer-const": true,
+        "radix": true,
+        "triple-equals": [true, "allow-null-check"],
+        "unified-signatures": true,
+        "variable-name": false,
+        "trailing-comma": [
+            false,
+            {
+                "multiline": "always",
+                "singleline": "never"
+            }
+        ],
+        "linebreak-style": [false, "LF"],
+        "no-submodule-imports": false,
+        "no-implicit-dependencies": [
+            false,
+            "dev",
+            ["src", "common", "routes", "store", "components", "pages", "statics", "models", "public", "stories"]
+        ],
+        "typedef": [
+            true,
+            "call-signature",
+            "parameter",
+            "arrow-call-signature",
+            "arrow-parameter",
+            "property-declaration"
+        ]
+    },
+    "rulesDirectory": [],
+    "linterOptions": {
+        "exclude": [".next/", "node_modules/", "coverage/lcov-report/*.js"]
+    }
+}

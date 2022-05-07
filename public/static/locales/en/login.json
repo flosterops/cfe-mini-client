@@ -1,0 +1,15 @@
+{
+    "email": "Email",
+    "password": "Password",
+    "forgotPass": "Forgot password?",
+    "signIn": "Sign In",
+    "noAccount": "Don't you have account?",
+    "registerYourSelf": "Register your self",
+    "rememberMe": "Remember me",
+    "sendVerifyCode": "Email to verify resetting password",
+    "setNewPassword": "Set new password",
+    "rememberedPass": "Remembered password?",
+    "sendCode": "Send code",
+    "emailSentSuccessfully": "Email was sent successfully",
+    "passwordWasChanged": "Password was changed successfully"
+}

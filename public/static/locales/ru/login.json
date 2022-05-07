@@ -1,0 +1,9 @@
+{
+    "email": "Почта",
+    "password": "Пароль",
+    "forgotPass": "Забыли пароль?",
+    "signIn": "Войти",
+    "noAccount": "Еще нет аккаунта?",
+    "registerYourSelf": "Зарегистрироваться",
+    "rememberMe": "Запомнить меня"
+}

@@ -1,0 +1,1153 @@
+{
+    "mappings": [
+        {
+            "id": "7c4528f0-bbef-4281-947c-a6d05d507af1",
+            "request": {
+                "url": "/api/commerce/v1_2/purchase.action?products=D2050_ADVENT_CALENDAR_2020",
+                "method": "POST"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "transactionId": "222",
+                    "items": [
+                        {
+                            "id": 2222,
+                            "name": "Hot Halloween set female",
+                            "quantity": 1,
+                            "price": "999",
+                            "img": ""
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "*",
+                    "Access-Control-Allow-Headers": "Accept, Content-Type, Content-Encoding, Server, Transfer-Encoding,  Referer, User-Agent, Access-Control-Allow-Origin, storeToken, X-GameServer-Channel, Access-Control-Allow-Headers, Access-Control-Allow-Methods",
+                    "X-Content-Type-Options": "nosniff",
+                    "x-frame-options": "DENY",
+                    "x-xss-protection": "1; mode=block"
+                }
+            },
+            "uuid": "7c4528f0-bbef-4281-947c-a6d05d507af1",
+            "priority": 2
+        },
+        {
+            "id": "567cd018-fd32-4e12-959c-9715a707a686",
+            "request": {
+                "urlPattern": "/v1_2/channels",
+                "method": "OPTIONS"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "*",
+                    "Access-Control-Allow-Headers": "Accept, Content-Type, Content-Encoding, Server, Transfer-Encoding, X-Requested-With, X-Authorization, Referer, User-Agent, Access-Control-Allow-Origin, storeToken, X-GameServer-Channel"
+                }
+            },
+            "uuid": "567cd018-fd32-4e12-959c-9715a707a686"
+        },
+        {
+            "id": "adb84f41-4559-4a18-bfcb-65ff8103840a",
+            "request": {
+                "url": "/v1_2/channels",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "channels": [
+                        {
+                            "id": "b10029a7-9ca3-4bba-b534-fcf5d7901886",
+                            "name": "Defiance 2050",
+                            "category": "MMO Shooter",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+                            "image": "/img/channels/withLogos/Defiance.png",
+                            "smallImage": "/img/defiance2050-small.png",
+                            "channel": "defiance2050pc",
+                            "mobileImage": "/img/games/defiance2050-mobile.png"
+                        },
+                        {
+                            "id": "b10029a7-9ca3-4bba-b534-fcf5d7901887",
+                            "name": "Atlas Rogues",
+                            "category": "Rogue-lite",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+                            "image": "/img/channels/withLogos/AR.png",
+                            "smallImage": "/img/atlas-small.png",
+                            "channel": "atlasrogues",
+                            "mobileImage": "/img/games/atlas-rogue-mobile.png"
+                        },
+                        {
+                            "id": "9580d1fe-f014-42ee-b4cc-08a734313a90",
+                            "name": "Archeage",
+                            "category": "MMO Shooter",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+                            "image": "/img/channels/withLogos/AA.png",
+                            "smallImage": "/img/archeage-small.png",
+                            "channel": "archeage",
+                            "mobileImage": "/img/games/archeage-mobile.png"
+                        },
+                        {
+                            "id": "9580d1fe-f014-42ee-b4cc-08a734313a91",
+                            "name": "Archeage: Unchained",
+                            "category": "MMO Shooter",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+                            "image": "/img/channels/withLogos/AAU.png",
+                            "smallImage": "/img/archeage-uncheined-small.png",
+                            "channel": "aaunchained",
+                            "mobileImage": "/img/games/archeage-unchained-mobile.png"
+                        },
+                        {
+                            "id": "b10029a7-9ca3-4bba-b534-fcf5d7901888",
+                            "name": "Defiance",
+                            "category": "MMO Shooter",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+                            "image": "/img/channels/withLogos/Defiance.png",
+                            "smallImage": "/img/defiance-small.png",
+                            "channel": "defiancepc",
+                            "mobileImage": "/img/games/defiance2050-mobile.png"
+                        },
+                        {
+                            "id": "b10029a7-9ca3-4bba-b534-fcf5d7901889",
+                            "name": "Trove",
+                            "category": "MMO Shooter",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+                            "image": "/img/channels/withLogos/Trove.png",
+                            "smallImage": "/img/trove-small.png",
+                            "channel": "trovelive",
+                            "mobileImage": "/img/games/trove-mobile.png"
+                        },
+                        {
+                            "id": "2f0ab4c4-0d0d-4fb4-bd9f-f7b46809210d",
+                            "name": "Rift",
+                            "category": "MMO Shooter",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+                            "image": "/img/channels/withLogos/Rift.png",
+                            "smallImage": "/img/rift-small.png",
+                            "channel": "rift",
+                            "mobileImage": "/img/games/rift-mobile.png"
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "adb84f41-4559-4a18-bfcb-65ff8103840a"
+        },
+        {
+            "id": "97926572-cb39-489f-8469-b051f198bbc6",
+            "request": {
+                "url": "/search/v1_2/categories.action?channel=archeage",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "categories": [
+                        {
+                            "id": "featured",
+                            "name": "Featured"
+                        },
+                        {
+                            "id": "sets",
+                            "name": "Sets"
+                        },
+                        {
+                            "id": "melee",
+                            "name": "Melee"
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "97926572-cb39-489f-8469-b051f198bbc6"
+        },
+        {
+            "id": "4c76a87c-4e9d-4eda-bcba-6e12ad651e47",
+            "request": {
+                "url": "/v1_2/cart?channel=defiance2050pc",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "products": [
+                        {
+                            "id": "D2050_STARTER_CLASS_PACK",
+                            "name": "Starter Class Pack",
+                            "price": "999",
+                            "currencyType": "EUR",
+                            "bonus": "20",
+                            "additionalInfo": "3 days only",
+                            "count": 1,
+                            "img": "https://s6r5v2u5.ssl.hwcdn.net//211/QHA/QLT/WRT/S4N.jpg"
+                        },
+                        {
+                            "id": "D2050_ENGINEER_CLASS_PACK",
+                            "name": "Engineer Class Pack",
+                            "price": "1999",
+                            "currencyType": "EUR",
+                            "bonus": "50",
+                            "additionalInfo": "3 days only",
+                            "count": 4,
+                            "img": "https://s6r5v2u5.ssl.hwcdn.net//211/B0N/SYA/JWB/4GU.jpg"
+                        },
+                        {
+                            "id": "D2050_DEMOLITIONIST_CLASS_PACK",
+                            "name": "Demolitionist Class Pack",
+                            "price": "2999",
+                            "currencyType": "EUR",
+                            "bonus": "150",
+                            "additionalInfo": "3 days only",
+                            "count": 5,
+                            "img": "https://s6r5v2u5.ssl.hwcdn.net//211/E0A/TUA/G0T/CPI.jpg"
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "4c76a87c-4e9d-4eda-bcba-6e12ad651e47"
+        },
+        {
+            "id": "2511eca0-fa34-4821-b75c-a8555f99f74b",
+            "request": {
+                "url": "/v1_2/cart?channel=atlasrogues",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "products": []
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "2511eca0-fa34-4821-b75c-a8555f99f74b"
+        },
+        {
+            "id": "ac73de02-de5d-4e12-a503-bc8803b5bf4b",
+            "request": {
+                "url": "/search/v1_2/categories.action?channel=aaunchained",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "categories": [
+                        {
+                            "id": "featured",
+                            "name": "Featured"
+                        },
+                        {
+                            "id": "sets",
+                            "name": "Sets"
+                        },
+                        {
+                            "id": "melee",
+                            "name": "Melee"
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "ac73de02-de5d-4e12-a503-bc8803b5bf4b"
+        },
+        {
+            "id": "4fb52892-eb39-49ae-8330-6696c17a6fb7",
+            "request": {
+                "url": "/search/v1_2/categories.action?channel=defiancepc",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "categories": [
+                        {
+                            "id": "featured",
+                            "name": "Featured"
+                        },
+                        {
+                            "id": "sets",
+                            "name": "Sets"
+                        },
+                        {
+                            "id": "melee",
+                            "name": "Melee"
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "4fb52892-eb39-49ae-8330-6696c17a6fb7"
+        },
+        {
+            "id": "7ffea407-ac53-42e6-ad6b-42d608824565",
+            "request": {
+                "url": "/search/v1_2/categories.action?channel=rift",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "categories": [
+                        {
+                            "id": "featured",
+                            "name": "Featured"
+                        },
+                        {
+                            "id": "sets",
+                            "name": "Sets"
+                        },
+                        {
+                            "id": "melee",
+                            "name": "Melee"
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "7ffea407-ac53-42e6-ad6b-42d608824565"
+        },
+        {
+            "id": "de48e496-e47e-4f04-a3b0-2de0256da7a7",
+            "request": {
+                "url": "/search/v1_2/product-query.action?channel=trovelive&categories=FEATURED,STARTER_SHOP,SETS,MELEE",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "categories": [
+                        {
+                            "id": "FEATURED",
+                            "name": "Featured",
+                            "products": []
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "de48e496-e47e-4f04-a3b0-2de0256da7a7"
+        },
+        {
+            "id": "35409858-02b1-4fed-920b-b82573b3360a",
+            "request": {
+                "url": "/account/v1_2/apply-code-transactions",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "transactions": [
+                        {
+                            "id": "ef9b25de-da61-4303-9489-6029bdc10cbb",
+                            "date": "2020-11-20",
+                            "game": "S4League",
+                            "name": "Mount: Fast Frank"
+                        },
+                        {
+                            "id": "4bc2f86f-c253-4792-ba3d-a028ca6acc31",
+                            "date": "2020-12-20",
+                            "game": "Rift",
+                            "name": "Mount: Fast Frank"
+                        },
+                        {
+                            "id": "b263cd33-8688-4b95-bb7e-855ce4fc68e9",
+                            "date": "2020-10-20",
+                            "game": "ArcheAge: Unchained",
+                            "name": "Mount: Fast Frank"
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "35409858-02b1-4fed-920b-b82573b3360a"
+        },
+        {
+            "id": "91637640-6a39-4ef6-ac1c-978f692bcb53",
+            "request": {
+                "url": "/account/v1_2/payment-transactions",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "transactions": [
+                        {
+                            "id": "b1d24d5c-c67b-499b-9ac4-700f1060ce52",
+                            "order": "1234324123",
+                            "date": "2020-11-20",
+                            "game": "S4League",
+                            "transactionType": "Digital purchase",
+                            "product": "700+150 Credits",
+                            "price": 19.99,
+                            "card": "mastercard: ****-****-****-8546 (05/2021) - Via Ayden",
+                            "subProducts": [
+                                {
+                                    "id": "5e759e30-c748-4db4-99c5-8631c0547531",
+                                    "name": "Hot Halloween set female",
+                                    "quantity": 1,
+                                    "price": 19.96
+                                },
+                                {
+                                    "id": "99f3820c-f20e-4d61-9a39-63e9e9c91363",
+                                    "name": "Premium Weapons Mystery box",
+                                    "quantity": 2,
+                                    "price": 1.49
+                                },
+                                {
+                                    "id": "386a158f-8fc4-46e2-a5b4-d30a20fec962",
+                                    "name": "Esperino x7",
+                                    "quantity": 1,
+                                    "price": 9.99
+                                },
+                                {
+                                    "id": "551ee1c9-e1cc-428a-9095-531faeefbf08",
+                                    "name": "Long Tail Mystery Box",
+                                    "quantity": 4,
+                                    "price": 4.99
+                                },
+                                {
+                                    "id": "62c576e1-70cb-4bdb-9615-8b064c078a0a",
+                                    "name": "Another Mystery Box",
+                                    "quantity": 1,
+                                    "price": 7.99
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0550798f-6320-410b-a6a8-0573e8259e3a",
+                            "order": "4545454545",
+                            "date": "2020-12-20",
+                            "game": "Rift",
+                            "transactionType": "Digital purchase",
+                            "product": "700+150 Credits",
+                            "price": 29.99,
+                            "card": "mastercard: ****-****-****-8546 (05/2021) - Via Ayden",
+                            "subProducts": []
+                        },
+                        {
+                            "id": "bd494bc2-8a2e-454f-a849-a431386a89f6",
+                            "order": "9283923298",
+                            "date": "2020-10-20",
+                            "game": "ArcheAge: Unchained",
+                            "transactionType": "Code Applied",
+                            "product": "700+150 Credits",
+                            "price": 99.99,
+                            "card": "mastercard: ****-****-****-8546 (05/2021) - Via Ayden",
+                            "subProducts": []
+                        },
+                        {
+                            "id": "eefc1ec7-da3d-42a0-97e6-35a51c25d3ba",
+                            "order": "1234324123",
+                            "date": "2020-11-20",
+                            "game": "S4League",
+                            "transactionType": "Digital purchase",
+                            "product": "700+150 Credits",
+                            "price": 19.99,
+                            "card": "mastercard: ****-****-****-8546 (05/2021) - Via Ayden",
+                            "subProducts": []
+                        },
+                        {
+                            "id": "88f68488-e4e1-4583-8c46-9571ac4f26ac",
+                            "order": "4545454545",
+                            "date": "2020-12-20",
+                            "game": "Rift",
+                            "transactionType": "Digital purchase",
+                            "product": "700+150 Credits",
+                            "price": 29.99,
+                            "card": "mastercard: ****-****-****-8546 (05/2021) - Via Ayden",
+                            "subProducts": []
+                        },
+                        {
+                            "id": "36675b0d-9cf2-4bb5-8731-bf211e8693f0",
+                            "order": "9283923298",
+                            "date": "2020-10-20",
+                            "game": "ArcheAge: Unchained",
+                            "transactionType": "Code Applied",
+                            "product": "700+150 Credits",
+                            "price": 99.99,
+                            "card": "mastercard: ****-****-****-8546 (05/2021) - Via Ayden",
+                            "subProducts": []
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "91637640-6a39-4ef6-ac1c-978f692bcb53"
+        },
+        {
+            "id": "39cf4261-805f-4199-abac-5bb7ffcabba9",
+            "request": {
+                "url": "/account/v1_2/usable-payment-methods",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "payments": [
+                        {
+                            "id": "4174667b-27c2-4df6-b3ef-9ff25e85e7d7",
+                            "via": "Ayden",
+                            "card": "mastercard: ****-****-****-8546 (05/2021)",
+                            "type": "mastercard",
+                            "default": true
+                        },
+                        {
+                            "id": "e28061e8-8c41-4b3f-bf32-0fcd6b730271",
+                            "via": "",
+                            "card": "paypal: a*********@gmail.com",
+                            "type": "paypal",
+                            "default": false
+                        },
+                        {
+                            "id": "7bd659cc-9d07-47c9-91ba-3be395a05e04",
+                            "via": "Else",
+                            "card": "mastercard: ****-****-****-8546 (05/2021)",
+                            "type": "mastercard",
+                            "default": false
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "39cf4261-805f-4199-abac-5bb7ffcabba9"
+        },
+        {
+            "id": "466f65fb-e84e-4045-bc1c-d2ac341e2e89",
+            "request": {
+                "url": "/account/v1_2/account-info",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "email": "mock-email@gamigo.com",
+                    "glyphTag": "mock_glyph_tag",
+                    "balance": {
+                        "binary": 250,
+                        "glyph": 180
+                    },
+                    "emailVerified": false,
+                    "securityStatus": 25,
+                    "secretQuestionFirst": {
+                        "answer": "Mocked answer first",
+                        "question": "Mocked question first"
+                    },
+                    "favoriteChannels": ["defiance2050pc", "atlasrogues", "archeage"],
+                    "secretQuestionSecond": {
+                        "answer": "Mocked answer second",
+                        "question": "Mocked question second"
+                    },
+                    "mobileAuthKey": "mock-auth-key",
+                    "linkedGames": [
+                        {
+                            "id": "glyph",
+                            "label": "Glyph",
+                            "status": true
+                        },
+                        {
+                            "id": "defiance",
+                            "label": "Defiance",
+                            "status": true
+                        },
+                        {
+                            "id": "trove",
+                            "label": "Trove",
+                            "status": false
+                        },
+                        {
+                            "id": "archeage",
+                            "label": "ArcheAge",
+                            "status": true
+                        },
+                        {
+                            "id": "defiance2050",
+                            "label": "Defiance 2050 Consoles",
+                            "status": true
+                        },
+                        {
+                            "id": "trovePS4",
+                            "label": "Trove PS4",
+                            "status": false
+                        },
+                        {
+                            "id": "archeageUnchained",
+                            "label": "ArcheAge Unchained",
+                            "status": false
+                        },
+                        {
+                            "id": "rift",
+                            "label": "Rift",
+                            "status": true
+                        },
+                        {
+                            "id": "troveXbox",
+                            "label": "Trove Xbox One",
+                            "status": false
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "466f65fb-e84e-4045-bc1c-d2ac341e2e89"
+        },
+        {
+            "id": "765aa84e-fbe4-4270-a594-a1d1e924eb49",
+            "request": {
+                "url": "/account/v1_2/account-info/empty",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "email": "mock-email@gamigo.com",
+                    "glyphTag": "",
+                    "balance": {
+                        "binary": 0,
+                        "glyph": 0
+                    },
+                    "emailVerified": false,
+                    "securityStatus": 25,
+                    "secretQuestionFirst": {
+                        "answer": "",
+                        "question": ""
+                    },
+                    "secretQuestionSecond": {
+                        "answer": "",
+                        "question": ""
+                    },
+                    "mobileAuthKey": "",
+                    "linkedGames": [
+                        {
+                            "id": "glyph",
+                            "label": "Glyph",
+                            "status": false
+                        },
+                        {
+                            "id": "defiance",
+                            "label": "Defiance",
+                            "status": false
+                        },
+                        {
+                            "id": "trove",
+                            "label": "Trove",
+                            "status": false
+                        },
+                        {
+                            "id": "archeage",
+                            "label": "ArcheAge",
+                            "status": false
+                        },
+                        {
+                            "id": "defiance2050",
+                            "label": "Defiance 2050 Consoles",
+                            "status": false
+                        },
+                        {
+                            "id": "trovePS4",
+                            "label": "Trove PS4",
+                            "status": false
+                        },
+                        {
+                            "id": "archeageUnchained",
+                            "label": "ArcheAge Unchained",
+                            "status": false
+                        },
+                        {
+                            "id": "rift",
+                            "label": "Rift",
+                            "status": false
+                        },
+                        {
+                            "id": "troveXbox",
+                            "label": "Trove Xbox One",
+                            "status": false
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "765aa84e-fbe4-4270-a594-a1d1e924eb49"
+        },
+        {
+            "id": "2e548a96-11cb-4450-8d3b-33356bafedaa",
+            "request": {
+                "url": "/search/v1_2/categories.action?channel=atlasrogues",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "categories": [
+                        {
+                            "id": "featured",
+                            "name": "Featured"
+                        },
+                        {
+                            "id": "sets",
+                            "name": "Sets"
+                        },
+                        {
+                            "id": "melee",
+                            "name": "Melee"
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "2e548a96-11cb-4450-8d3b-33356bafedaa"
+        },
+        {
+            "id": "6a080906-5713-4883-b604-ca6a0dbd3388",
+            "request": {
+                "url": "/v1_2/cart?channel=archeage",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "products": []
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "6a080906-5713-4883-b604-ca6a0dbd3388"
+        },
+        {
+            "id": "9cac3b5f-3a9f-4bdd-94a0-96a18ae37d78",
+            "request": {
+                "url": "/v1_2/cart?channel=aaunchained",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "products": []
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "9cac3b5f-3a9f-4bdd-94a0-96a18ae37d78"
+        },
+        {
+            "id": "036c2ea2-9091-42b4-a719-93ea6cb5c480",
+            "request": {
+                "url": "/v1_2/cart?channel=defiancepc",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "products": []
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "036c2ea2-9091-42b4-a719-93ea6cb5c480"
+        },
+        {
+            "id": "f38ed120-4460-4df8-99ed-35a72761b3c2",
+            "request": {
+                "url": "/search/v1_2/product-query.action?channel=defiance2050pc&categories=featured",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "categories": [
+                        {
+                            "id": "FEATURED",
+                            "name": "Featured",
+                            "products": [
+                                {
+                                    "id": "D2050_STARTER_CLASS_PACK",
+                                    "name": "Starter Class Pack",
+                                    "price": "1999",
+                                    "bonus": "50",
+                                    "img": "https://s6r5v2u5.ssl.hwcdn.net//211/QHA/QLT/WRT/S4N.jpg"
+                                },
+                                {
+                                    "id": "D2050_ENGINEER_CLASS_PACK",
+                                    "name": "Engineer Class Pack",
+                                    "price": "1999",
+                                    "bonus": "50",
+                                    "img": "https://s6r5v2u5.ssl.hwcdn.net//211/B0N/SYA/JWB/4GU.jpg"
+                                },
+                                {
+                                    "id": "D2050_DEMOLITIONIST_CLASS_PACK",
+                                    "name": "Demolitionist Class Pack",
+                                    "price": "1999",
+                                    "bonus": "50",
+                                    "img": "https://s6r5v2u5.ssl.hwcdn.net//211/E0A/TUA/G0T/CPI.jpg"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "f38ed120-4460-4df8-99ed-35a72761b3c2"
+        },
+        {
+            "id": "e57e4f18-6266-4ffa-bca9-2f773d6657b4",
+            "request": {
+                "url": "/search/v1_2/categories.action?channel=defiance2050pc",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "categories": [
+                        {
+                            "id": "featured",
+                            "name": "Featured"
+                        },
+                        {
+                            "id": "sets",
+                            "name": "Sets"
+                        },
+                        {
+                            "id": "melee",
+                            "name": "Melee"
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "e57e4f18-6266-4ffa-bca9-2f773d6657b4"
+        },
+        {
+            "id": "0eb59377-5f4d-4c29-a755-6ab7bca31e59",
+            "request": {
+                "url": "/search/v1_2/get-product.action?channel=defiance2050pc",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "body": "<productResponse><name>DEFIANCE 2050</name><purchase>cart</purchase><header_background>//211/JHT/TJ3/LLR/22U.png</header_background><categories><category id=\\\"FEATURED\\\">Featured</category><category id=\\\"STARTER_SHOP\\\">Starter Shop</category><category id=\\\"SETS\\\">Sets</category><category id=\\\"MELEE\\\">Melee</category></categories><topBanner><imageSrc>https://webcdn.triongames.com/redesign-mini/images/PTS4Tw.png</imageSrc><title>Advent Calendar</title><description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</description><linkText>Get yours now!</linkText><href>/</href></topBanner><patronBanner><imageSrc>https://webcdn.triongames.com/redesign-mini/images/00_main_preview.png</imageSrc><title>Refer a legend</title><description></description><linkText>lEARN MORE</linkText><href>/</href></patronBanner><purchaseOnlyPc>true</purchaseOnlyPc><preferences><socialLinks><title>Join atlas rogues community!</title><links><id>a68b8285-a4e4-476e-8517-9a4637e07aca</id><src>/img/channels/social/facebook.svg</src></links><links><id>139a116b-ae02-4754-8cea-f46b52c0f12e</id><src>/img/channels/social/twitter.svg</src></links><links><id>0cbc3637-6a59-436d-a175-e92c9260115a</id><src>/img/channels/social/twitch.svg</src></links><links><id>052592d1-eb09-43bd-be18-42923bcdb51b</id><src>/img/channels/social/forum.svg</src></links></socialLinks><requirements><title>System requirements</title><subtitle>Minimum:</subtitle><description>OS: Windows 10 or later Processor: Quad Core. Intel(R) Core(TM) i5-5250M CPU ~2.5GHz or better Memory: 4 GB Graphics: Graphics card with 1696 MB display memory with Shader level 3.0 or above. DirectX®: Direct3D 11 Hard Drive: 10.0 GB available Sound: Standard</description></requirements><privacy>Atlas Rogues ©2020 gamigo Publishing GmbH, a member of gamigo group. gamigo is a registered trademark of gamigo AG in Germany and in the European Union. All other trademarks are properties of their respective owners. All rights reserved.</privacy><violence>https://s6r5v2u5.ssl.hwcdn.net/211/YF7/WZR/WB1/ZQH.png</violence></preferences></productResponse>",
+                "headers": {
+                    "Content-Type": "application/xml"
+                }
+            },
+            "uuid": "0eb59377-5f4d-4c29-a755-6ab7bca31e59"
+        },
+        {
+            "id": "10da4cca-026a-4fbb-960a-f582c751f1d4",
+            "request": {
+                "url": "/search/v1_2/get-product.action?channel=atlasrogues",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "body": "<productResponse><name>Atlas Rogues</name><header_background>//211/JHT/TJ3/LLR/22U.png</header_background><categories><category id=\"FEATURED\">Featured</category><category id=\"STARTER_SHOP\">Starter Shop</category><category id=\"SETS\">Sets</category><category id=\"MELEE\">Melee</category></categories></productResponse>",
+                "headers": {
+                    "Content-Type": "application/xml"
+                }
+            },
+            "uuid": "10da4cca-026a-4fbb-960a-f582c751f1d4"
+        },
+        {
+            "id": "97120ef3-e720-4293-9d01-b62de01822d4",
+            "request": {
+                "url": "/search/v1_2/product-query.action?channel=atlasrogues&categories=FEATURED,STARTER_SHOP,SETS,MELEE",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "categories": [
+                        {
+                            "id": "FEATURED",
+                            "name": "Featured",
+                            "products": [
+                                {
+                                    "id": "ATLAS_ROGUES_BASE_PACK",
+                                    "name": "Atlas Rogues Base Pack",
+                                    "price": "999",
+                                    "currencyType": "EUR",
+                                    "bonus": "20",
+                                    "img": "https://s6r5v2u5.ssl.hwcdn.net//155/J76/6HW/FOE/BCR.jpg"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "97120ef3-e720-4293-9d01-b62de01822d4"
+        },
+        {
+            "id": "6651c9a5-c830-40a3-a16c-886c11c7d272",
+            "request": {
+                "url": "/api/commerce/v1_2/getusablepaymentmethods.action",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "methods": {
+                        "saved": [
+                            {
+                                "id": "user_card_1",
+                                "name": "mastercard: ****-****-****-8546 (05/2021)"
+                            },
+                            {
+                                "id": "paypal",
+                                "name": "PAYPAL"
+                            }
+                        ],
+                        "another": [
+                            {
+                                "id": "credit_card",
+                                "name": "credit card"
+                            }
+                        ]
+                    }
+                },
+                "headers": {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "*",
+                    "Access-Control-Allow-Headers": "Accept, Content-Type, Content-Encoding, Server, Transfer-Encoding,  Referer, User-Agent, Access-Control-Allow-Origin",
+                    "X-Content-Type-Options": "nosniff",
+                    "x-frame-options": "DENY",
+                    "x-xss-protection": "1; mode=block"
+                }
+            },
+            "uuid": "6651c9a5-c830-40a3-a16c-886c11c7d272"
+        },
+        {
+            "id": "d0dac395-9bae-4557-8de8-7b4f2e24626e",
+            "request": {
+                "urlPattern": "/api/commerce/v1_2/purchase.action\\?products=(.*)",
+                "method": "OPTIONS"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "*",
+                    "Access-Control-Allow-Headers": "Accept, Content-Type, Content-Encoding, Server, Transfer-Encoding, X-Requested-With, X-Authorization, Referer, User-Agent, Access-Control-Allow-Origin, storeToken, X-GameServer-Channel, Access-Control-Allow-Headers, Access-Control-Allow-Methods",
+                    "X-Content-Type-Options": "nosniff",
+                    "x-frame-options": "DENY",
+                    "x-xss-protection": "1; mode=block"
+                }
+            },
+            "uuid": "d0dac395-9bae-4557-8de8-7b4f2e24626e"
+        },
+        {
+            "id": "5c4eee90-0b34-40ae-b671-fab341600c0e",
+            "request": {
+                "urlPattern": "/api/commerce/v1_2/purchase.action\\?products=(.*)",
+                "method": "POST"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "transactionId": "123",
+                    "items": [
+                        {
+                            "id": 1234,
+                            "name": "Hot Halloween set female",
+                            "quantity": 1,
+                            "price": "999",
+                            "img": ""
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "*",
+                    "Access-Control-Allow-Headers": "Accept, Content-Type, Content-Encoding, Server, Transfer-Encoding,  Referer, User-Agent, Access-Control-Allow-Origin, storeToken, X-GameServer-Channel, Access-Control-Allow-Headers, Access-Control-Allow-Methods",
+                    "X-Content-Type-Options": "nosniff",
+                    "x-frame-options": "DENY",
+                    "x-xss-protection": "1; mode=block"
+                }
+            },
+            "uuid": "5c4eee90-0b34-40ae-b671-fab341600c0e"
+        },
+        {
+            "id": "aa89c84f-dd0a-4326-8130-795e51fe5e3a",
+            "request": {
+                "url": "/api/commerce/v1_2/verifypurchase.action?transactionId=123",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "result": [
+                        {
+                            "id": 1234,
+                            "name": "Hot Halloween set female",
+                            "quantity": 1,
+                            "price": "999",
+                            "currencyType": "EUR",
+                            "img": ""
+                        }
+                    ],
+                    "bonus": "480",
+                    "orderId": "560782835",
+                    "paymentMethod": "mastercard",
+                    "currencyType": "EUR",
+                    "date": "Oct 23, 10:51pm"
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "aa89c84f-dd0a-4326-8130-795e51fe5e3a"
+        },
+        {
+            "id": "931f6cef-a3e8-4965-806e-37edbd72ccfd",
+            "request": {
+                "url": "/search/v1_2/product-query.action?channel=defiance2050pc&categories=FEATURED,STARTER_SHOP,SETS,MELEE",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "categories": [
+                        {
+                            "id": "FEATURED",
+                            "name": "Featured",
+                            "products": [
+                                {
+                                    "id": "D2050_STARTER_CLASS_PACK",
+                                    "name": "Starter Class Pack",
+                                    "price": "999",
+                                    "currencyType": "EUR",
+                                    "bonus": "20",
+                                    "img": "https://s6r5v2u5.ssl.hwcdn.net//211/QHA/QLT/WRT/S4N.jpg"
+                                },
+                                {
+                                    "id": "D2050_ADVENT_CALENDAR_2020",
+                                    "name": "Advent Calendar 2020",
+                                    "price": "4999",
+                                    "currencyType": "TWC",
+                                    "bonus": "50",
+                                    "img": "https://s6r5v2u5.ssl.hwcdn.net//211/LYI/HU5/G1N/M0D.png"
+                                },
+                                {
+                                    "id": "D2050_DEMOLITIONIST_CLASS_PACK",
+                                    "name": "Demolitionist Class Pack",
+                                    "price": "2999",
+                                    "currencyType": "EUR",
+                                    "bonus": "150",
+                                    "img": "https://s6r5v2u5.ssl.hwcdn.net//211/E0A/TUA/G0T/CPI.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "STARTER_SHOP",
+                            "name": "Starter shop",
+                            "products": [
+                                {
+                                    "id": "D2050_STARTER_CLASS_PACK",
+                                    "name": "Starter Class Pack",
+                                    "price": "999",
+                                    "currencyType": "EUR",
+                                    "bonus": "20",
+                                    "img": "https://s6r5v2u5.ssl.hwcdn.net//211/QHA/QLT/WRT/S4N.jpg"
+                                },
+                                {
+                                    "id": "D2050_ENGINEER_CLASS_PACK",
+                                    "name": "Engineer Class Pack",
+                                    "price": "1999",
+                                    "currencyType": "EUR",
+                                    "bonus": "50",
+                                    "img": "https://s6r5v2u5.ssl.hwcdn.net//211/B0N/SYA/JWB/4GU.jpg"
+                                },
+                                {
+                                    "id": "D2050_DEMOLITIONIST_CLASS_PACK",
+                                    "name": "Demolitionist Class Pack",
+                                    "price": "2999",
+                                    "currencyType": "EUR",
+                                    "bonus": "150",
+                                    "img": "https://s6r5v2u5.ssl.hwcdn.net//211/E0A/TUA/G0T/CPI.jpg"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "931f6cef-a3e8-4965-806e-37edbd72ccfd"
+        },
+        {
+            "id": "9e1133e1-08c1-42d8-9da4-b51ed466d013",
+            "request": {
+                "url": "/api/commerce/v1_2/verifypurchase.action?transactionId=222",
+                "method": "GET"
+            },
+            "response": {
+                "status": 200,
+                "jsonBody": {
+                    "result": [
+                        {
+                            "id": 1234,
+                            "name": "ADVENT CALENDAR 2020",
+                            "quantity": 1,
+                            "price": "4999",
+                            "currencyType": "TWC",
+                            "img": ""
+                        }
+                    ],
+                    "bonus": "480",
+                    "orderId": "560782835",
+                    "currencyType": "TWC",
+                    "date": "Oct 23, 10:51pm"
+                },
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "uuid": "9e1133e1-08c1-42d8-9da4-b51ed466d013"
+        }
+    ],
+    "meta": {
+        "total": 30
+    }
+}

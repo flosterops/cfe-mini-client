@@ -1,0 +1,30 @@
+{
+    "socialLinks": {
+        "title": "Join atlas rogues community!",
+        "links": [
+            {
+                "id": "e8e78c81-5b75-46c2-8a3d-f77491b44aa3",
+                "src": ""
+            },
+            {
+                "id": "86550998-127e-4957-b38f-f2c56f09f58d",
+                "src": ""
+            },
+            {
+                "id": "843fb1bf-b785-44ab-9777-0e9925c4cdb7",
+                "src": ""
+            },
+            {
+                "id": "439ea3ac-8eef-4f2f-b2f1-2e5208a0839e",
+                "src": ""
+            }
+        ]
+    },
+    "requirements": {
+        "title": "System requirements",
+        "subtitle": "Minimum",
+        "description": "OS: Windows 10 or later Processor: Quad Core. Intel(R) Core(TM) i5-5250M CPU ~2.5GHz or better Memory: 4 GB Graphics: Graphics card with 1696 MB display memory with Shader level 3.0 or above. DirectX®: Direct3D 11 Hard Drive: 10.0 GB available Sound: Standard"
+    },
+    "privacy": "Atlas Rogues ©2020 gamigo Publishing GmbH, a member of gamigo group. gamigo is a registered trademark of gamigo AG in Germany and in the European Union. All other trademarks are properties of their respective owners. All rights reserved.",
+    "pgImageSrc": ""
+}

@@ -1,0 +1,48 @@
+## Manage versions with `nvchecker` command
+
+## Run `nvchecker -c nvchecker.toml` to generate `new_ver.txt` file.
+## Run `nvcmp -c nvchecker.toml` to see possible upgrades.
+## Run `nvtake -c nvchecker.toml package` to bump the package version.
+
+## Requires additionally: gcrane, jq
+
+[__config__]
+oldver = "old_ver.json"
+newver = "new_ver.json"
+
+[alpine]
+## https://hub.docker.com/_/alpine?tab=tags
+## https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases
+source = "container"
+container = "library/alpine"
+include_regex = "\\d+\\.\\d+\\.\\d+"
+
+[curl]
+## https://hub.docker.com/r/curlimages/curl/tags
+## https://github.com/curl/curl/releases
+source = "container"
+container = "curlimages/curl"
+include_regex = "\\d+\\.\\d+\\.\\d+"
+
+[gcrane]
+## https://gcr.io/go-containerregistry/gcrane
+## https://github.com/google/go-containerregistry/commits/main/cmd/gcrane
+source = "cmd"
+cmd = "gcrane ls --json gcr.io/go-containerregistry/gcrane | jq -r '.manifest|to_entries[]|select(.value.tag|index(\"debug\")).key'"
+include_regex = "sha256:.*"
+
+[kaniko]
+## https://github.com/GoogleContainerTools/kaniko/releases
+## https://github.com/GoogleContainerTools/kaniko/blob/master/CHANGELOG.md
+source = "github"
+github = "GoogleContainerTools/kaniko"
+use_max_tag = true
+include_regex = "v\\d+\\.\\d+\\.\\d+$"
+prefix = "v"
+
+[node]
+## https://hub.docker.com/_/node
+## https://github.com/nodejs/node/blob/master/CHANGELOG.md
+source = "container"
+container = "library/node"
+include_regex = "14\\.\\d+\\.\\d+"
